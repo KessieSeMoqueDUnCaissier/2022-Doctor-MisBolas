@@ -1,6 +1,6 @@
 # Doctor-MisBolas 😳
-Bienvenue amigo! Je suis monsieur MisBolas et je te présente mon jeu! Ton but? Aide-moi à opérer Nickocado! L'opération est cependant très dure...  
-Ce jeu est codé à l'aide du module Pygame sur Python.
+Bienvenue amigo! Je suis señor MisBolas, docteur diplômé d'Etat et je te présente mon jeu! Ton but? Aide-moi à opérer Nickocado! L'opération est cependant très dure...  
+Ce jeu est codé à l'aide du module Pygame sur Python, et en majorité avec de la P.O.O.
 
 ----------------------------------------------------------
 
