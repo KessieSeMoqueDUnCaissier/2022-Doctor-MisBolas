@@ -28,3 +28,8 @@ Ce projet est certes amusant mais les problèmes se dessinent déjà:
   * Si le jeu est trop dur, alors on imposera un système à 3 vies  
 
 ![angryspeed](https://user-images.githubusercontent.com/90514084/161158995-27ada36e-3d0b-4487-a9b1-fc8a7eb07b96.gif)
+
+----------------------------------------------------------
+
+## Fonctions et prototypage 🤔
+
