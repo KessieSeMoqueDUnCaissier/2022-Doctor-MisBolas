@@ -31,5 +31,27 @@ Ce projet est certes amusant mais les problèmes se dessinent déjà:
 
 ----------------------------------------------------------
 
-## Fonctions et prototypage 🤔
+## Minimum Viable Product 🧠  
+Le joueur doit pouvoir enlever tous les éléments se trouvant dans le corps du patient pour gagner. Si il touche autre chose que la zone rouge (dans laquelle restent les éléments), alors il perd et la partie recommence. Aucune autre contrainte dans cette version: temps imparti, types d'éléments, système de points...  
+Il y a un écran de début et de fin. Voici une image illustrant la version de notre jeu, de manière simple:  
 
+![MisBolasDemo](https://user-images.githubusercontent.com/90514084/162639710-7791ffe3-f980-4c29-a83f-c59fbb3a4e8c.png)  
+
+----------------------------------------------------------
+
+## Fonctions et prototypage 🤔  
+*Classe Joueur:*  
+ * Attrape(self, objet)  
+ * Relache(self, objet)  
+ * Marque(self) -> Int
+ * Meurs(self) 
+   
+*Classe Patient():*   
+ * Est_touché(self) -> Bool  
+ * Est_vide(self)  -> Bool  
+   
+*Classe Appareil():*  
+ * Est_touché(self) -> Bool
+ * Contient(self, element) -> Bool
+   
+*Classe Element(pygame.sprite.Sprite):*  
