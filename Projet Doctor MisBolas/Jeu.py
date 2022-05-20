@@ -41,7 +41,7 @@ poubelle_b= Classes.Poubelle_B()
 liste_coca = pygame.sprite.Group()
 liste_burger = pygame.sprite.Group()
 
-# dessin des cocas
+# dessin des cocas et burgers
 for i in range(5):
     coca = Classes.Coca(random.randint(100,800),random.randint(257,600))
     burger = Classes.Burger(random.randint(100,700),random.randint(251,600))
@@ -108,7 +108,7 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
             player.etat="Relâche" # Si on clique (droit), on initialise player.sac comme une liste vide
             player.sac = []
     
-        boissons = pygame.sprite.spritecollide(player, liste_coca, False)
+        boissons = pygame.sprite.spritecollide(player, liste_coca, False) # collision avec les cocas
         for boisson in boissons:
             if player.etat == "Attrape":
                 player.attraper(boisson)
@@ -120,7 +120,7 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
                     boissons.remove(boisson)
 
 
-        burgers = pygame.sprite.spritecollide(player, liste_burger, False)
+        burgers = pygame.sprite.spritecollide(player, liste_burger, False) # collision avec les burgers
         for bouffe in burgers:
             if player.etat == "Attrape":
                 player.attraper(bouffe)
@@ -134,7 +134,7 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
 
 
          # MOURIR
-    if pygame.sprite.collide_mask(player, patient) and not  pygame.sprite.collide_mask(player, veines):
+    if pygame.sprite.collide_mask(player, patient) and not  pygame.sprite.collide_mask(player, veines): # si on touche le patient, alors on meurt
         player.mourir()               
            
         
