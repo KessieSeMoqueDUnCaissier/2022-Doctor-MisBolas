@@ -40,18 +40,38 @@ Il y a un écran de début et de fin. Voici une image illustrant la version de n
 ----------------------------------------------------------
 
 ## Fonctions et prototypage 🤔  
-*Classe Joueur:*  
- * Attrape(self, objet)  
- * Relache(self, objet)  
- * Marque(self) -> Int
- * Meurs(self) 
+class Joueur() :
+  
+    def attraper(self, objet):
+        """
+        Prend en paramètres un objet, si la liste sac est vide, 
+        Alors on ajoute cet objet à la liste,
+        L'objet dans la liste prend les coordonnées du joueur
+        """  
+    def mourir(self):
+        """
+        Initialise la vie du joueur à 0
+        """  
+    def marquer(self):
+        """
+        Accumule 250 points à chaque appel
+        """  
+    def update(self,screen):
+        """
+        Renvoie le score à l'écran de jeu
+        """  
+  
+
+
+class Patient():
    
-*Classe Patient():*   
- * Est_touché(self) -> Bool  
- * Est_vide(self)  -> Bool  
+class Veines():
+    
+class Poubelle_C():
+    
+class Coca(pygame.sprite.Sprite):
    
-*Classe Appareil():*  
- * Est_touché(self) -> Bool
- * Contient(self, element) -> Bool
-   
-*Classe Element(pygame.sprite.Sprite):*  
+class Poubelle_B():
+     
+class Burger(pygame.sprite.Sprite):
+    
