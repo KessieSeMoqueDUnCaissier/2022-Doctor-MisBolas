@@ -41,7 +41,7 @@ poubelle_b= Classes.Poubelle_B()
 liste_coca = pygame.sprite.Group()
 liste_burger = pygame.sprite.Group()
 
-# dessin des cocas et burgers
+# dessin des cocas
 for i in range(5):
     coca = Classes.Coca(random.randint(100,800),random.randint(257,600))
     burger = Classes.Burger(random.randint(100,700),random.randint(251,600))
@@ -94,6 +94,8 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
             if event.key == pygame.K_j:
                 mixer.music.load("Sons\Giorno_JJBA.mp3")
                 mixer.music.play()
+            if event.key == pygame.K_p:
+                mixer.music.stop()
         if victoire:
             mixer.music.stop()
             mixer.music.unload()
@@ -108,7 +110,7 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
             player.etat="Relâche" # Si on clique (droit), on initialise player.sac comme une liste vide
             player.sac = []
     
-        boissons = pygame.sprite.spritecollide(player, liste_coca, False) # collision avec les cocas
+        boissons = pygame.sprite.spritecollide(player, liste_coca, False)
         for boisson in boissons:
             if player.etat == "Attrape":
                 player.attraper(boisson)
@@ -120,7 +122,7 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
                     boissons.remove(boisson)
 
 
-        burgers = pygame.sprite.spritecollide(player, liste_burger, False) # collision avec les burgers
+        burgers = pygame.sprite.spritecollide(player, liste_burger, False)
         for bouffe in burgers:
             if player.etat == "Attrape":
                 player.attraper(bouffe)
@@ -134,7 +136,7 @@ while running : # boucle infinie pour laisser la fenêtre ouverte
 
 
          # MOURIR
-    if pygame.sprite.collide_mask(player, patient) and not  pygame.sprite.collide_mask(player, veines): # si on touche le patient, alors on meurt
+    if pygame.sprite.collide_mask(player, patient) and not  pygame.sprite.collide_mask(player, veines):
         player.mourir()               
            
         
